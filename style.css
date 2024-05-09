@@ -1,0 +1,29 @@
+h1 {
+    color: navy;
+    background-color: #ffefaf;
+}
+
+h2 {
+    color: navy;
+    border-bottom: #ffefaf solid;
+}
+
+h3 {
+    color: navy;
+}
+
+p.seika {
+    background-color: #dfdfdf;
+}
+
+div.kakukai {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+div.kakukai > div {
+    border: 5px solid #ffefaf;
+    margin: 10px;
+    padding: 5px;
+}
