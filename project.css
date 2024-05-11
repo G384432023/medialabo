@@ -1,0 +1,9 @@
+h1 {
+    color: navy;
+    background-color: #ffefaf;
+}
+
+h2 {
+    color: navy;
+    border-bottom: #ffefaf solid;
+}
