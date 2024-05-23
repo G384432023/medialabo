@@ -47,16 +47,21 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 
-// console.log('世界の天気');
-// console.log('検索結果');
-// console.log('緯度: ' + data["coord"]["lat"]); 
-// console.log('経度: ' + data["coord"]["lon"]);
-// console.log('天気: ' + data["weather"][0]["description"]); 
-// console.log('最低気温: ' + data["main"]["temp_min"]); 
-// console.log('最高気温: ' + data["main"]["temp_max"]); 
-// console.log('湿度: ' + data["main"]["humidity"]); 
-// console.log('風速: ' + data["wind"]["speed"]); 
-// console.log('風向: ' + data["wind"]["deg"]); 
-// console.log('都市名: ' + data["name"]); 
+console.log('世界の天気');
+console.log('検索結果');
+console.log('緯度: ' + data["coord"]["lat"]); 
+console.log('経度: ' + data["coord"]["lon"]);
+console.log('天気: ' + data["weather"][0]["description"]); 
+console.log('最低気温: ' + data["main"]["temp_min"]); 
+console.log('最高気温: ' + data["main"]["temp_max"]); 
+console.log('湿度: ' + data["main"]["humidity"]); 
+console.log('風速: ' + data["wind"]["speed"]); 
+console.log('風向: ' + data["wind"]["deg"]); 
+console.log('都市名: ' + data["name"]); 
 
-console.log(Object.values(data));
+// console.log(Object.values(data));
+
+let weather1 = document.createElement('li'); 
+weather1.textContent = '緯度: ' + data["coord"]["lat"]; 
+let result1 = document.querySelector('div#result'); 
+result1.insertAdjacentElement('beforeend', weather1); 
