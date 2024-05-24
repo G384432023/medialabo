@@ -59,9 +59,52 @@ console.log('風速: ' + data["wind"]["speed"]);
 console.log('風向: ' + data["wind"]["deg"]); 
 console.log('都市名: ' + data["name"]); 
 
-// console.log(Object.values(data));
+// 課題4-2
+let result1u = document.createElement('ul'); 
+let result2u = document.querySelector('div#result'); 
+result2u.insertAdjacentElement('beforeend', result1u); 
 
 let weather1 = document.createElement('li'); 
 weather1.textContent = '緯度: ' + data["coord"]["lat"]; 
-let result1 = document.querySelector('div#result'); 
+let result1 = document.querySelector('div#result > ul'); 
 result1.insertAdjacentElement('beforeend', weather1); 
+
+let weather2 = document.createElement('li'); 
+weather2.textContent = '経度: ' + data["coord"]["lon"]; 
+let result2 = document.querySelector('div#result > ul'); 
+result2.insertAdjacentElement('beforeend', weather2); 
+
+let weather3 = document.createElement('li'); 
+weather3.textContent = '天気: ' + data["weather"][0]["description"]; 
+let result3 = document.querySelector('div#result > ul'); 
+result3.insertAdjacentElement('beforeend', weather3); 
+
+let weather4 = document.createElement('li'); 
+weather4.textContent = '最低気温: ' + data["main"]["temp_min"]; 
+let result4 = document.querySelector('div#result > ul'); 
+result4.insertAdjacentElement('beforeend', weather4); 
+
+let weather5 = document.createElement('li'); 
+weather5.textContent = '最高気温: ' + data["main"]["temp_max"]; 
+let result5 = document.querySelector('div#result > ul'); 
+result5.insertAdjacentElement('beforeend', weather5); 
+
+let weather6 = document.createElement('li'); 
+weather6.textContent = '湿度: ' + data["main"]["humidity"]; 
+let result6 = document.querySelector('div#result > ul'); 
+result6.insertAdjacentElement('beforeend', weather6); 
+
+let weather7 = document.createElement('li'); 
+weather7.textContent = '風速: ' + data["wind"]["speed"]; 
+let result7 = document.querySelector('div#result > ul'); 
+result7.insertAdjacentElement('beforeend', weather7); 
+
+let weather8 = document.createElement('li'); 
+weather8.textContent = '風向: ' + data["wind"]["deg"]; 
+let result8 = document.querySelector('div#result > ul'); 
+result8.insertAdjacentElement('beforeend', weather8); 
+
+let weather9 = document.createElement('li'); 
+weather9.textContent = '都市名: ' + data["name"]; 
+let result9 = document.querySelector('div#result > ul'); 
+result8.insertAdjacentElement('beforeend', weather9); 
