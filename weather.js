@@ -108,3 +108,15 @@ let weather9 = document.createElement('li');
 weather9.textContent = '都市名: ' + data["name"]; 
 let result9 = document.querySelector('div#result > ul'); 
 result8.insertAdjacentElement('beforeend', weather9); 
+
+let b = document.querySelector('button#btn');
+b.addEventListener('click', weatherid);
+function weatherid() {
+    let c = document.querySelector('select#city');
+    let cn = c.selectedIndex;
+    let co = c.querySelectorAll('option');
+    let cid = co.item(cn);
+    console.log(cid.textContent + 'の検索キー: ' + cid.getAttribute('value'));
+}
+
+//データ要素はまだ書いてない
