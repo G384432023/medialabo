@@ -47,76 +47,160 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 
-console.log('世界の天気');
-console.log('検索結果');
-console.log('緯度: ' + data["coord"]["lat"]); 
-console.log('経度: ' + data["coord"]["lon"]);
-console.log('天気: ' + data["weather"][0]["description"]); 
-console.log('最低気温: ' + data["main"]["temp_min"]); 
-console.log('最高気温: ' + data["main"]["temp_max"]); 
-console.log('湿度: ' + data["main"]["humidity"]); 
-console.log('風速: ' + data["wind"]["speed"]); 
-console.log('風向: ' + data["wind"]["deg"]); 
-console.log('都市名: ' + data["name"]); 
+// console.log('世界の天気');
+// console.log('検索結果');
+// console.log('緯度: ' + data["coord"]["lat"]); 
+// console.log('経度: ' + data["coord"]["lon"]);
+// console.log('天気: ' + data["weather"][0]["description"]); 
+// console.log('最低気温: ' + data["main"]["temp_min"]); 
+// console.log('最高気温: ' + data["main"]["temp_max"]); 
+// console.log('湿度: ' + data["main"]["humidity"]); 
+// console.log('風速: ' + data["wind"]["speed"]); 
+// console.log('風向: ' + data["wind"]["deg"]); 
+// console.log('都市名: ' + data["name"]); 
 
 // 課題4-2
 let result1u = document.createElement('ul'); 
 let result2u = document.querySelector('div#result'); 
 result2u.insertAdjacentElement('beforeend', result1u); 
 
-let weather1 = document.createElement('li'); 
-weather1.textContent = '緯度: ' + data["coord"]["lat"]; 
-let result1 = document.querySelector('div#result > ul'); 
-result1.insertAdjacentElement('beforeend', weather1); 
+// let weather1 = document.createElement('li'); 
+// weather1.textContent = '緯度: ' + data["coord"]["lat"]; 
+// let result1 = document.querySelector('div#result > ul'); 
+// result1.insertAdjacentElement('beforeend', weather1); 
 
-let weather2 = document.createElement('li'); 
-weather2.textContent = '経度: ' + data["coord"]["lon"]; 
-let result2 = document.querySelector('div#result > ul'); 
-result2.insertAdjacentElement('beforeend', weather2); 
+// let weather2 = document.createElement('li'); 
+// weather2.textContent = '経度: ' + data["coord"]["lon"]; 
+// let result2 = document.querySelector('div#result > ul'); 
+// result2.insertAdjacentElement('beforeend', weather2); 
 
-let weather3 = document.createElement('li'); 
-weather3.textContent = '天気: ' + data["weather"][0]["description"]; 
-let result3 = document.querySelector('div#result > ul'); 
-result3.insertAdjacentElement('beforeend', weather3); 
+// let weather3 = document.createElement('li'); 
+// weather3.textContent = '天気: ' + data["weather"][0]["description"]; 
+// let result3 = document.querySelector('div#result > ul'); 
+// result3.insertAdjacentElement('beforeend', weather3); 
 
-let weather4 = document.createElement('li'); 
-weather4.textContent = '最低気温: ' + data["main"]["temp_min"]; 
-let result4 = document.querySelector('div#result > ul'); 
-result4.insertAdjacentElement('beforeend', weather4); 
+// let weather4 = document.createElement('li'); 
+// weather4.textContent = '最低気温: ' + data["main"]["temp_min"]; 
+// let result4 = document.querySelector('div#result > ul'); 
+// result4.insertAdjacentElement('beforeend', weather4); 
 
-let weather5 = document.createElement('li'); 
-weather5.textContent = '最高気温: ' + data["main"]["temp_max"]; 
-let result5 = document.querySelector('div#result > ul'); 
-result5.insertAdjacentElement('beforeend', weather5); 
+// let weather5 = document.createElement('li'); 
+// weather5.textContent = '最高気温: ' + data["main"]["temp_max"]; 
+// let result5 = document.querySelector('div#result > ul'); 
+// result5.insertAdjacentElement('beforeend', weather5); 
 
-let weather6 = document.createElement('li'); 
-weather6.textContent = '湿度: ' + data["main"]["humidity"]; 
-let result6 = document.querySelector('div#result > ul'); 
-result6.insertAdjacentElement('beforeend', weather6); 
+// let weather6 = document.createElement('li'); 
+// weather6.textContent = '湿度: ' + data["main"]["humidity"]; 
+// let result6 = document.querySelector('div#result > ul'); 
+// result6.insertAdjacentElement('beforeend', weather6); 
 
-let weather7 = document.createElement('li'); 
-weather7.textContent = '風速: ' + data["wind"]["speed"]; 
-let result7 = document.querySelector('div#result > ul'); 
-result7.insertAdjacentElement('beforeend', weather7); 
+// let weather7 = document.createElement('li'); 
+// weather7.textContent = '風速: ' + data["wind"]["speed"]; 
+// let result7 = document.querySelector('div#result > ul'); 
+// result7.insertAdjacentElement('beforeend', weather7); 
 
-let weather8 = document.createElement('li'); 
-weather8.textContent = '風向: ' + data["wind"]["deg"]; 
-let result8 = document.querySelector('div#result > ul'); 
-result8.insertAdjacentElement('beforeend', weather8); 
+// let weather8 = document.createElement('li'); 
+// weather8.textContent = '風向: ' + data["wind"]["deg"]; 
+// let result8 = document.querySelector('div#result > ul'); 
+// result8.insertAdjacentElement('beforeend', weather8); 
 
-let weather9 = document.createElement('li'); 
-weather9.textContent = '都市名: ' + data["name"]; 
-let result9 = document.querySelector('div#result > ul'); 
-result8.insertAdjacentElement('beforeend', weather9); 
+// let weather9 = document.createElement('li'); 
+// weather9.textContent = '都市名: ' + data["name"]; 
+// let result9 = document.querySelector('div#result > ul'); 
+// result8.insertAdjacentElement('beforeend', weather9); 
+
+let resultx1 = document.createElement('li');
+resultx1.textContent = '検索結果はまだありません'
+let resultx2 = document.querySelector('div#result' > 'ul');
+resultx2.insertAdjacentElement('beforeend', resultx1); 
+
 
 let b = document.querySelector('button#btn');
-b.addEventListener('click', weatherid);
-function weatherid() {
-    let c = document.querySelector('select#city');
-    let cn = c.selectedIndex;
-    let co = c.querySelectorAll('option');
-    let cid = co.item(cn);
-    console.log(cid.textContent + 'の検索キー: ' + cid.getAttribute('value'));
-}
+b.addEventListener('click', weather);
+function weather() {
+  let resultr = document.querySelector('div#result' > 'ul');
+  resultr.remove();
 
+  let result1u = document.createElement('ul'); 
+  let result2u = document.querySelector('div#result'); 
+  result2u.insertAdjacentElement('beforeend', result1u); 
+
+  let c = document.querySelector('select#city');
+  let cn = c.selectedIndex;
+  let co = c.querySelectorAll('option');
+  let cid = co.item(cn);
+  console.log(cid.textContent + 'の検索キー: ' + cid.getAttribute('value'));
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + cid.getAttribute('value') + '.json'
+  axios.get(url)
+    .then(showResult)
+    .catch(showError)
+    .then(finish);
+}
+function showResult(resp) {
+  let data = resp.data;
+  if(typeof data === 'string') {
+      data = JSON.parse(data);
+  }
+  console.log(data["coord"]["lat"]);
+  let weather1 = document.createElement('li'); 
+  weather1.textContent = '緯度: ' + data["coord"]["lat"]; 
+  let result1 = document.querySelector('div#result > ul'); 
+  result1.insertAdjacentElement('beforeend', weather1); 
+
+  console.log(data["coord"]["lon"]);
+  let weather2 = document.createElement('li'); 
+  weather2.textContent = '経度: ' + data["coord"]["lon"]; 
+  let result2 = document.querySelector('div#result > ul'); 
+  result2.insertAdjacentElement('beforeend', weather2); 
+
+  console.log(data["weather"][0]["description"]);
+  let weather3 = document.createElement('li'); 
+  weather3.textContent = '天気: ' + data["weather"][0]["description"]; 
+  let result3 = document.querySelector('div#result > ul'); 
+  result3.insertAdjacentElement('beforeend', weather3); 
+
+  console.log(data["main"]["temp_min"]);
+  let weather4 = document.createElement('li'); 
+  weather4.textContent = '最低気温: ' + data["main"]["temp_min"]; 
+  let result4 = document.querySelector('div#result > ul'); 
+  result4.insertAdjacentElement('beforeend', weather4);
+
+  console.log(data["main"]["temp_max"]);
+  let weather5 = document.createElement('li'); 
+  weather5.textContent = '最高気温: ' + data["main"]["temp_max"]; 
+  let result5 = document.querySelector('div#result > ul'); 
+  result5.insertAdjacentElement('beforeend', weather5); 
+
+  console.log(data["main"]["humidity"]);
+  let weather6 = document.createElement('li'); 
+  weather6.textContent = '湿度: ' + data["main"]["humidity"]; 
+  let result6 = document.querySelector('div#result > ul'); 
+  result6.insertAdjacentElement('beforeend', weather6); 
+  
+  console.log(data["wind"]["speed"]);
+  let weather7 = document.createElement('li'); 
+  weather7.textContent = '風速: ' + data["wind"]["speed"]; 
+  let result7 = document.querySelector('div#result > ul'); 
+  result7.insertAdjacentElement('beforeend', weather7); 
+  
+  console.log(data["wind"]["deg"]);
+  let weather8 = document.createElement('li'); 
+  weather8.textContent = '風向: ' + data["wind"]["deg"]; 
+  let result8 = document.querySelector('div#result > ul'); 
+  result8.insertAdjacentElement('beforeend', weather8); 
+
+  console.log(data["name"]);
+  let weather9 = document.createElement('li'); 
+  weather9.textContent = '都市名: ' + data["name"]; 
+  let result9 = document.querySelector('div#result > ul'); 
+  result8.insertAdjacentElement('beforeend', weather9); 
+} 
+function showError(err) {
+  console.log(err);
+} 
+function finish() {
+  console.log('Ajax 通信が終わりました');
+} 
 //データ要素はまだ書いてない
+
+//確認用
