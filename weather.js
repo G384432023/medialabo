@@ -258,6 +258,5 @@ function showError(err) {
 function finish() {
   console.log('Ajax 通信が終わりました');
 } 
-//データ要素はまだ書いてない
 
 //確認用
