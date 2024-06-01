@@ -109,6 +109,9 @@ result2u.insertAdjacentElement('beforeend', result1u);
 // let result9 = document.querySelector('div#result > ul'); 
 // result8.insertAdjacentElement('beforeend', weather9); 
 
+
+
+//表示
 let weather9 = document.createElement('li'); 
 weather9.textContent = '都市名: '; 
 let result9 = document.querySelector('div#result > ul'); 
@@ -153,10 +156,8 @@ let weather8 = document.createElement('li');
 weather8.textContent = '風向: '; 
 let result8 = document.querySelector('div#result > ul'); 
 result8.insertAdjacentElement('beforeend', weather8); 
-
-
 //
-
+//ボタン押し
 let b = document.querySelector('button#btn');
 b.addEventListener('click', weather);
 function weather() {
@@ -178,7 +179,8 @@ function weather() {
     .catch(showError)
     .then(finish);
 }
-
+//
+//接続OK
 let kaisu = 0;
 function showResult(resp) {
   let data = resp.data;
@@ -251,12 +253,15 @@ function weatherdata() {
   }
     
 }
-
+//
+//接続NG
 function showError(err) {
   console.log(err);
 } 
+//
+//終わり
 function finish() {
   console.log('Ajax 通信が終わりました');
 } 
-
+//
 //確認用
