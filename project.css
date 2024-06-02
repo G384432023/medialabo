@@ -1,9 +1,14 @@
 h1 {
-    color: navy;
-    background-color: #ffefaf;
+    color: white;
+    background-color: rgb(50, 150, 220);
 }
 
 h2 {
-    color: navy;
-    border-bottom: #ffefaf solid;
+    color: black;
+    border-bottom: rgb(50, 150, 220) solid;
+}
+
+p.dark {
+    float: right;
+    padding-right:  30px;
 }

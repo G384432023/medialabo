@@ -160,6 +160,8 @@ result8.insertAdjacentElement('beforeend', weather8);
 //ボタン押し
 let b = document.querySelector('button#btn');
 b.addEventListener('click', weather);
+//
+//通信まで
 function weather() {
   let resultr = document.querySelector('div#result > ul');
   resultr.remove();
@@ -180,7 +182,7 @@ function weather() {
     .then(finish);
 }
 //
-//接続OK
+//通信OK
 let kaisu = 0;
 function showResult(resp) {
   let data = resp.data;
@@ -254,7 +256,7 @@ function weatherdata() {
     
 }
 //
-//接続NG
+//通信NG
 function showError(err) {
   console.log(err);
 } 
@@ -263,5 +265,30 @@ function showError(err) {
 function finish() {
   console.log('Ajax 通信が終わりました');
 } 
+//
+//ダークモード
+let dark = document.querySelector('button#dark');
+dark.addEventListener('click', mode);
+let modechange = 0;
+function mode() {
+  if(modechange % 2 === 0) {
+    let bd = document.querySelector('body'); 
+    bd.style.backgroundColor = 'rgb(10, 10, 30)';
+    bd.style.color = 'white'; 
+    let h2 = document.querySelector('h2');
+    h2.style.color = 'white'; 
+    let ax = document.querySelector('button#dark > a');
+    ax.textContent = 'OFF'; 
+  } else {
+    let bd = document.querySelector('body'); 
+    bd.style.backgroundColor = 'white';
+    bd.style.color = 'black'; 
+    let h2 = document.querySelector('h2');
+    h2.style.color = 'black'; 
+    let ax = document.querySelector('button#dark > a');
+    ax.textContent = 'ON'; 
+  }
+  modechange += 1;
+}
 //
 //確認用
